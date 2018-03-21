@@ -1,0 +1,104 @@
+%Copyright 2014 Jean-Philippe Eisenbarth
+%This program is free software: you can 
+%redistribute it and/or modify it under the terms of the GNU General Public 
+%License as published by the Free Software Foundation, either version 3 of the 
+%License, or (at your option) any later version.
+%This program is distributed in the hope that it will be useful,but WITHOUT ANY 
+%WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+%PARTICULAR PURPOSE. See the GNU General Public License for more details.
+%You should have received a copy of the GNU General Public License along with 
+%this program.  If not, see <http://www.gnu.org/licenses/>.
+
+%Based on the code of Yiannis Lazarides
+%http://tex.stackexchange.com/questions/42602/software-requirements-specification-with-latex
+%http://tex.stackexchange.com/users/963/yiannis-lazarides
+%Also based on the template of Karl E. Wiegers
+%http://www.se.rit.edu/~emad/teaching/slides/srs_template_sep14.pdf
+%http://karlwiegers.com
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={User Requirements},    % title
+    pdfauthor={Karolina Polanska, Paulina Szczerbak, Marta Ochowicz, Damian Kościk, Dawid Branicki},                     % author
+    pdfsubject={Movie platform},                        % subject of the document
+    pdfkeywords={movie, software, application}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+
+\begin{flushright}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{USER REQUIREMENTS}\\
+        \vspace{4cm}
+        Platform for watching movies and TV series online "NetFilm"\\
+        \vspace{1cm}
+        \LARGE{Version \myversion}\\
+        \vspace{1cm}
+        By:\\
+        Karolina Polańska\\
+        Paulina Szczerbak\\
+        Marta Ochowicz\\
+        Damian Kościk\\
+        Dawid Branicki\\
+        \vspace{3cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\section{Product Purpose}
+
+\section{Objectives}
+
+\chapter{Overall Description}
+
+\section{Stakeholders}
+
+\section{Constraints}
+
+\section{Naming convention}
+
+\section{Facts and assumptions}
+
+\section{Scope of the work}
+
+\section{Work context}
+
+\section{Work partitioning}
+
+\section{Data model}
+
+\section{Use cases}
+
+\chapter{Functional Requirements}
+
+\chapter{Nonfunctional Requirements}
+
+\section{Performance Requirements}
+
+\section{Security Requirements}
+
+\nocite{*}
+\end{document}
