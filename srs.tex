@@ -25,7 +25,7 @@
 \usepackage{graphicx}
 \hypersetup{
     bookmarks=false,    % show bookmarks bar?
-    pdftitle={User Requirements},    % title
+    pdftitle={Sotfware Requirements},    % title
     pdfauthor={Karolina Polanska, Paulina Szczerbak, Marta Ochowicz, Damian Kościk, Dawid Branicki},                     % author
     pdfsubject={Movie platform},                        % subject of the document
     pdfkeywords={movie, software, application}, % list of keywords
@@ -47,7 +47,7 @@
 \begin{flushright}
     \rule{16cm}{5pt}\vskip1cm
     \begin{bfseries}
-        \Huge{USER REQUIREMENTS}\\
+        \Huge{SOTFWARE REQUIREMENTS}\\
         \vspace{4cm}
         Platform for watching movies and TV series online "NetFilm"\\
         \vspace{1cm}
@@ -70,27 +70,210 @@
 
 \section{Product Purpose}
 
+The subject of the given document is to describe a platform that provides users with movies and TV series to be watched online in the demanded time. Name of the platform is NetFilm.
+
+The motivation to start the project is the assumption that this type of product is utmost desired in the marketplace.
+
+Currently, there is no service that offers best quality, up-to-date movies and TV series without the need to sign long lasting contract, whereas  NetFilm will not offer long term subscription. Main assumption of the project is to give an access to the platform for purchased month.
+
+It is believed that this type of transaction system is atractive for the users and will be the reason to choose NetFilm over other video on demand platforms.
+
+Furthermore, NetFilm is to offer multimedia of the chosen resolution, with the variety of audio and subtitles options. Altogether system shall be extremaly attractive, userfriendly and offer high quality service, what, supported by the newsletter with newest recommendations, shall convince users to use NetFilm for their everyday entertainment.
+
 \section{Objectives}
+
+The primary objective is to deliver top quality video on demand platform, that will be competition for cinemas and DVDs.
+Measure for this objective: at least one milion of registered users at a time.
+\\
+
+The secodary objective is to popularize sevice internationally and deliver multiple language options for customers.
+Measure: to support at least 10 European languages for 80\% of movies, and have users from all European Union countries.
+
 
 \chapter{Overall Description}
 
 \section{Stakeholders}
 
+All people who may be involved directly or indirectly in the process of implementation of the project:
+
+\begin{itemize}
+\item Customers - in the case of given project customers are identified as users of the service. User is a person who has registered account in the service. They are required to have basic computer skills \ref{comp-skills}, and possess bank account.
+\\Priority: high
+\\Degree of involvement: involved in final stage of the project, after it is released to production.
+
+\item Software designers - Software architecture specialists that will design the software. They are required to have strong professional knowledge suitable for their role in the project.
+\\Priority: high
+\\Degree of involvement: continuous, whole project scope.
+
+\item Frontend designers - UI and UX specialists \ref{comp-skills} to design graphical aspect of user interface. Required to have professional knowledge suitable for their role in the project.
+\\Priority: high
+\\Degree of involvement: crucial in the first stage of the project development. Consulting role during implementation phases.
+
+\item Software developers - programmers that will implement and maintain the system. They are required to have professional knowledge suitable for their particular role in the project.
+\\Priority: high
+\\Degree of involvement: continuous, whole project scope.
+
+\item Software testers - Quality Assurance team who will see to the correct work of the system. They are required to have professional knowledge suitable for their particular role in the project.
+\\Priority: high
+\\Degree of involvement: continuous, whole project scope.
+
+\item System testers - users that are paid to use the system and prepare user experience assesment. Required to have basic computer skills \ref{comp-skills}.
+\\Priority: low
+\\Degree of involvement: involved in final stage of the project, just before it is released to production.
+
+\item Marketing specialists - people to design marketing campaigns and construct newsletter. They are required to have professional knowledge suitable for their particular role in the project.
+\\Priority: low
+\\Degree of involvement: involved in the maintemance of project, after it is released to production.
+
+\item Translators - people to provide subtitles for movies. Required to have qualification to translate in the given language.
+\\Priority: low
+\\Degree of involvement: involved in the maintemance of project, after it is released to production.
+
+\item Business specialists - people who will decide about subscription prices, and to choose movies and negotiate license fees. Reguired to have professional knowledge in business field.
+\\Priority: middle
+\\Degree of involvement: involved in the maintenance of project, after it is released to production.
+
+\item System administator - (admin) person who will perform all the maintenance work within admin dashboard, connected with uploading and deleting movies.
+\\Priority: middle
+\\Degree of involvment: involved in the maintenance of project, after it is released to production. Full shift employee. 
+
+\item Investors - people to fund development stage of the project in exchange for shares.
+\\Priority: high
+\\Degree of involvement: consultative role with no regular basis.
+\end{itemize}
+
 \section{Constraints}
 
-\section{Naming convention}
+Following list presents implementation constraints agreed by the executive team:
+
+\begin{itemize}
+\item Dashboards shall be composed using following website technologies: HTML5, CSS3, Node.js, Angular 4.
+\\These are modern technologies that allow to create responsive user interface. Moreover, development team find it familiar.
+
+\item System shall operate in newest versions of top 10 mist popular web browsers.
+
+\item All multimedia files must be equiped with several thumbnails, title and short description.
+\\This will allow to create user friendly dashboard that provide user with most usefull information about multimedia.
+
+\item Dashboard must be mobile friendly.
+\\More than 50\% of Internet browses go through mobile devices. This will allow cursomers to appreciate service while travelling.
+
+\item Client side software must be lightweight what means that all source code files are to be minified and images to be compressed.
+\\This is to assure the shortest possible loading time and improve user experience.
+
+\item All multimedia files must be stored on the servers owned by the company.
+\\This is to ensure quality of the transmission and multimedia license limitations.
+
+\item No more than 100Tb of multimedia files must be stored on the servers.
+\\This is determined by currently possesed server.
+
+\item Server site software is to be codded in Java and Spring library.
+\\This is agreed due to recommendation of software development team, who is familiar with this technology.
+
+\item Database shall be Oracle based.
+\\This will ensure best quality, fail safe system and is freely expandable in the future.
+
+\item Payments shall be accomplished by PayPal.
+\\This is personal request of the investor.
+
+\item User dashboard must be password protected. Passwords shall be stored in the database in a form of MD5 hash.
+\\This ensures user account safety.
+
+\item The first test version of the system should be ready for approval in January 2019
+\\This requirement comes directly from investors and is associated with budget.
+
+\item Salaries shouldn't sum up to more than 100 000 PLN / month.
+
+\end{itemize}
 
 \section{Facts and assumptions}
 
-\section{Scope of the work}
+The following conditions must be fulfilled for the system to be operational:
+\begin{itemize}
+\item User have JavaScript enabled in the browser.
+\item User poses intermediate knowledge of web browser environment.
+\item User have internet access with the connection speed of at least $20Mb/s$.
+\item User poses bank account with debit/credit card and is willing to share the credentials with PayPal.
+\item No more than 5 million page views monthly.
+\item No more than 1 million users logged in at the same time.
+\end{itemize}
 
-\section{Work context}
+\section{Naming convention and terminology}
+\label{comp-skills}
 
-\section{Work partitioning}
+\begin{itemize}
+\item User - person who has registered account in the service.
+\item Active User - person who purchased access to the plaftorm for the current month.
+\item Inactive User - person who has account in the system but didn't purchase access for the given month. He's not permitted to browse nor play movies.
+\item Admin - employee of the NetFilm company that performs all the maintenance activities such as updating multimedia. He's provided with separate admin dashboard.
+\item Dashboard - application home screen for logged in users. Allows to perform operations such as browsing and playing movies.
+\item Kids mode - application profile that presents only content suitable for people under 12 years old
+\item Basic computer skills - ability to use computer interface which is keyboard, mouse and screen. Knowledge how to navigate within internet browser.
+\item Production - in software development terminology, it is system version released to be operated by users.
+\item Dev version - development version of the system. Not released for users.
+\item UI - User Interface - describes how interface looks like.
+\item UX - User Experience - describes how the system should behave.
+\item Video on demand - video streaming launched by user, played on his device
+\item Client side software - software that runs on the user's computer, in the Internet browser environment.
+\item Server side software - software that runs on the company's server.
+\end{itemize}
 
-\section{Data model}
+\section{The scope of the work}
 
-\section{Use cases}
+NetFilm is a new system, first of it's kind on the market that offers short term subscriptions. Users will be able to watch legal, best quality movies without signing long term contracts.
+
+The platform is expected to evolve over at least one year, ultimately offering vast variety of multimedia files in many languages, comfortable search system and best quality recommendations available both from desktop interface as well as from mobile devices.
+
+
+For each registered user will be created an account with it's customized dashboard. Dashboard will contain user's movie list, top suggestions based on tags of previously watched movies and an average rate of the movie. To play media, all it takes is to click the chosen position. 
+
+Figure \ref{fig:SysML} illustrates system architecture.\\
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1\textwidth]{img/sysml.jpg}
+  \caption{Requirements diagram}
+  \label{fig:SysML}
+\end{figure}
+
+\subsection{Use cases}
+
+Every user shall be able to do the following things within his dashboard:
+
+\begin{itemize}
+\item search to find movie by tags
+\item filter by genre
+\item add movie to "My list"
+\item recommendation section
+\item newly added section
+\item play movie
+\item change resolution of the movie (choose from given options)
+\item change language of the movie
+\item turn on and change language of subtitles
+\item rate movie (as good or bad)
+\item resume playing
+\item switch on/off "kids mode"
+\end{itemize}
+
+\pagebreak
+
+\subsection{Work partitioning}
+
+Following list presents all identified business cases:
+
+\begin{itemize}
+\item Purchase of the monthly subscription by user.
+\\Input: user registers account by setting up login and password, providing his email address and paying for the subscription via external system PayPal.
+\\Output: Gains access to customised user dashboard.
+
+\item Monthly newsletter that introduces new movies.
+\\Input: List of movies revently added to the system.
+\\Output: newsletter sent to all users with movie suggestions and button to proceed directly to the platform.
+
+\item Purchase new movie licenses to add them to the platform by manager.
+\\Input: Desired movie.
+\\Output: Movie collection gets larger.
+\end{itemize}
 
 \chapter{Functional Requirements}
 
@@ -99,6 +282,14 @@
 \section{Performance Requirements}
 
 \section{Security Requirements}
+
+\chapter{Other issues}
+
+\section{Open Issues}
+
+\section{Off-the-shelf solutions}
+
+\section{New problems}
 
 \nocite{*}
 \end{document}
