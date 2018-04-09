@@ -277,19 +277,169 @@ Following list presents all identified business cases:
 
 \chapter{Functional Requirements}
 
+\section{New user registration}
+
+\subsection{Description and Priority}
+
+In order to get system account user needs to register by giving his/her e-mail address, his/her secret password, and filling the payment information such as: 
+\begin{itemize}
+\item brand,
+\item card number,
+\item expiration date,
+\item card holder,
+\item CVV.
+\end{itemize}
+
+Additionally, the user have to choose subscription plan where payment for the month is in advance but the first of all subscription month is free.
+
+Priority: \verb|high|.
+
+\subsection{Stimulus/Response Sequences}
+
+After clicking \verb|Register| button by user on service main screen system should redirect him/her to the registration page. There are a few fields to fill such as e-mail address, password,  payment information and selecting subscription plan. After fulfilling the form user press \verb|submit| button and is redirected to the payment service. After subscription is purchased, user receives confirmation e-mail and is encouraged to log in to his/her brand new dashboard.
+
+\section{User login}
+
+\subsection{Description and Priority}
+
+In order to get into users dashboard, one needs to log in to the previously created account.
+
+Priority: \verb|high|.
+
+\subsection{Stimulus/Response Sequences}
+
+After clicking \verb|Log in| button by user on service main screen system should ask him/her to provide his/her e-mail address and his/her password specified during registration process. If the verification process will be successful the user should be redirected to his/her dashboard. If verification process fails, proper information box shows up and user have another chance to correct the data. There is also option to reset the password, which results in sending new password on the given e-mail address.
+
+\section{Play movies}
+
+\subsection{Description and Priority}
+
+User has to be logged in. It is necessary to play video. This feature allows to play video.
+
+Priority: \verb|high|.
+
+\subsection{Stimulus/Response Sequences}
+
+According to a particular sequence to initialize video streaming user needs to press \verb|play| button that shows up when the mouse hovers on the selected movie thumbnail. As a result user will be redirected to the streaming page where video launches automatically. Additional options show up, such as audio/subtitles language selection or streaming quality selection.
+
+\section{Search movies}
+
+\subsection{Description and Priority}
+
+System will allow to look for specific tags in the multimedia database.
+
+Priority: \verb|medium|.
+
+\subsection {Stimulus/Response Sequences}
+
+The search engine will automatically fill in the missing letters to the matching tag and it will change to the correct page. 
+
+\section{Filter by genre}
+
+\subsection{Description and Priority}
+
+Feature of system allows to seek for the movie in the database by the genre.
+
+Priority: \verb|medium|.
+
+\subsection{Stimulus/Response Sequences}
+
+The \verb|genre| button reveals genre menu. User can choose any category and it will proceed to the correct page.  
+
+\section{ Recommendation system}
+
+\subsection{Description and Priority}
+
+
+System will propose movies based on user's search history and average ratings of the movie. This will make program more pleasing for the eye.
+
+Priority: \verb|medium|.
+
+\subsection{Stimulus/Response Sequences}
+
+
+There is no action required from user due to appearing recommendations.
+
+\section{Rating system}
+\subsection{Description and Priority}
+
+System that allows rating of movies. There are only to options available - like or dislike.
+
+Priority:\verb|low|.
+
+\subsection{Stimulus/Response Sequences}
+
+Under the movie there are two buttons- thumbs up and thumbs down. Their purpose is to rate the movie by clicking them.
+
+\section {Add movie to "My list"}
+
+\subsection{Description and Priority}
+
+System that allows adding movies to user's personal list.
+
+Priority: \verb|low|.
+
+\subsection{Stimulus/Response Sequences}
+
+User can add video by clicking the \verb|+| sign under the movie. This allow to add the movie to user`s personal list. 
+\section{Kids mode}
+
+\subsection{Description and Priority}
+
+System will allow to filter movies that are kids appropriate.
+
+Priority: \verb|low|.
+
+\subsection{Stimulus/Response Sequences}
+
+On the top of the page there is \verb|Kids mode| switch button that changes between Kids mode and adult mode. Clicking second time on the switch button will change the Kids mode to adult mode again.
+
+\section{Resume playing}
+
+\subsection{Description and Priority}
+
+System will allow to resume partially watched video.
+
+Priority: \verb|low|.
+
+\subsection{Stimulus/Response Sequences}
+
+In order to resume video user should click \verb|play| on the unfinished video. System will resume video from the last point it has been stopped. 
+
 \chapter{Nonfunctional Requirements}
 
 \section{Performance Requirements}
 
+All movie streamings should be able to start within 10s over 20Mbps internet connection. When the streaming request takes longer than 5 seconds the stream will automatically end.
+
 \section{Security Requirements}
+
+Users shall be required to log in to the system for all operations. All network transactions that involve financial information or personally identifiable information shall be encrypted.
+Additionally the search engine should be secured from the SQL injection by including function to filter characters.
 
 \chapter{Other issues}
 
 \section{Open Issues}
+The choice of movies supplier is an important issue. The supplier can be one or several. It is depends on the service's policy.
+
+The engine on which the service will be launched is an important issue and should be chosen in the first place. What engine will be used is not imposed drastically.
 
 \section{Off-the-shelf solutions}
 
+One of the ready solutions is to use popular frameworks and tools compatible with them. This will allow more efficient work and reduce the risk of project failure.
+
 \section{New problems}
+
+One of the problems that can occur while designing a website are the various versions of browsers that the user has. There may be a problem on the user's side with a frame or script that does not work due to the use of a little-popular browser.
+
+\chapter {Appendix}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1\textwidth]{img/usecase.PNG}
+  \caption{Use Case diagram}
+  \label{fig:Use case}
+\end{figure}
 
 \nocite{*}
 \end{document}
