@@ -216,6 +216,7 @@ The following conditions must be fulfilled for the system to be operational:
 \item Video on demand - video streaming launched by user, played on his device
 \item Client side software - software that runs on the user's computer, in the Internet browser environment.
 \item Server side software - software that runs on the company's server.
+\item HD, Full HD, Ultra HD - resolutions of movies, respectively $720p$, $1080p$ and $2160p$, where $p$ stands for number of horizontal lines of pixels.
 \end{itemize}
 
 \section{The scope of the work}
@@ -229,51 +230,90 @@ For each registered user will be created an account with it's customized dashboa
 
 Figure \ref{fig:SysML} illustrates system architecture.\\
 
-\begin{figure}[hp]
-  \centering
-  \includegraphics[width=1\textwidth]{img/sysml.jpg}
-  \caption{Requirements diagram}
-  \label{fig:SysML}
-\end{figure}
-
-\subsection{Use cases}
-
-Every user shall be able to do the following things within his dashboard:
-
-\begin{itemize}
-\item search to find movie by tags
-\item filter by genre
-\item add movie to "My list"
-\item recommendation section
-\item newly added section
-\item play movie
-\item change resolution of the movie (choose from given options)
-\item change language of the movie
-\item turn on and change language of subtitles
-\item rate movie (as good or bad)
-\item resume playing
-\item switch on/off "kids mode"
-\end{itemize}
-
-\pagebreak
-
-\subsection{Work partitioning}
+\subsection{Business cases}
 
 Following list presents all identified business cases:
 
 \begin{itemize}
-\item Purchase of the monthly subscription by user.
-\\Input: user registers account by setting up login and password, providing his email address and paying for the subscription via external system PayPal.
-\\Output: Gains access to customised user dashboard.
+\item New user registration.
+\\Input: user registers account by setting up login and password, providing his email address and paying for the subscription via external system PayPal. There are three options to choose from:
+\begin{itemize}
+\item small - video available up to HD resolution, maximum one device logged in at the time,
+\item medium - video available up to Full HD resolution, maximum two devices logged in at the time,
+\item large - video available up to Ultra HD resolution, maximum four devices logged in at the time.
+\end{itemize}
+Output: User gains access to customised dashboard.
+
+\item Subscription payments.
+Monthly subscription is purchased automatically via PayPal account, without any action from user, however he is allowed at any time to terminate it.
+\\Input: Fee is obtained automatically from users PayPal account.
+\\Output: User maintains access to customised dashboard.
 
 \item Monthly newsletter that introduces new movies.
 \\Input: List of movies revently added to the system.
 \\Output: newsletter sent to all users with movie suggestions and button to proceed directly to the platform.
 
-\item Purchase new movie licenses to add them to the platform by manager.
+\item New movies.
+\\Purchase new movie licenses to add them to the platform by manager.
 \\Input: Desired movie.
 \\Output: Movie collection gets larger.
+
+\item Subtitles.
+\\Subtitles for the movies will be created by professional translators and inserted into the plaftorm so that it will be more accessible for people from different countries.
+\\Input: Movie
+\\Output: Subtitles for that move in desired languages
 \end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/business.jpg}
+  \caption{Business Case diagram}
+  \label{fig:BC}
+\end{figure}
+
+\subsection{Use cases}
+
+In order to obtain access to the platform, one must do what follows:
+
+\begin{itemize}
+\item New user registration
+\item Log in/out
+\end{itemize}
+
+User's dashboard mockup is presented in \ref{fig:UI}.
+Every user shall be able to do the following things within his dashboard, after logging in:
+
+\begin{itemize}
+\item play movies
+\item search movies
+\item filter by genre
+\item rate movie (as good or bad)
+\item add movie to "My List"
+\item switch to Kids mode
+\item change movie settings such as resolution, language and subtitles
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{img/usecase.PNG}
+  \caption{Use Case diagram}
+  \label{fig:Use case}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{img/UI.jpg}
+  \caption{Anticipatory dashboard mockup}
+  \label{fig:UI}
+\end{figure}
+
+\begin{figure}[hp]
+  \centering
+  \includegraphics[width=1\textwidth]{img/sysml.jpg}
+  \caption{System Requirements Diagram}
+  \label{fig:SysML}
+\end{figure}
+
 
 \chapter{Functional Requirements}
 
@@ -432,14 +472,6 @@ One of the ready solutions is to use popular frameworks and tools compatible wit
 
 One of the problems that can occur while designing a website are the various versions of browsers available for users. There may be a problem on the client side with a frame or script that does not work due to the use of a little-popular browser.
 
-\chapter {Appendix}
-
-\begin{figure}[hp]
-  \centering
-  \includegraphics[width=1\textwidth]{img/usecase.PNG}
-  \caption{Use Case diagram}
-  \label{fig:Use case}
-\end{figure}
 
 \nocite{*}
 \end{document}
